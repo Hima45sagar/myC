@@ -1,0 +1,61 @@
+#include<stdio.h>
+
+int add(void);
+
+int substract(void);
+
+int multiple(void);
+
+int division(void);
+
+int main () {
+
+
+    add();
+
+    substract();
+
+    multiple();
+
+    return 0;
+}
+
+int add(void) {
+    int  num1, num2, sum;
+
+    printf("enter two numbers");
+    scanf("%d %d", &num1, num2);
+
+    sum = num1 + num2;
+
+    printf("sum is %d and %d : %d", sum);
+
+}
+
+int substract(void) {
+    int  num1, num2, substract;
+
+    printf("enter two numbers");
+    scanf("%d %d", &num1, num2);
+
+    substract = num1 - num2;
+
+    printf("substract is %d and %d : %d", substract);
+}
+
+int multiple(void) {
+    int  num1, num2, multiple;
+
+    multiple = num1 * num2;
+
+    printf("multiple is %d and %d : %d", multiple);
+}
+
+int division(void) {
+    int num1, num2, division;
+
+    division = num1 / num2;
+
+    printf("division is %d and %d : %d", division);
+
+}
