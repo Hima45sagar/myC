@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<string.h>
+
+struct student {
+    int marks[5], total;
+    float percentage;
+    char name[20];
+};
+
+int main () {
+    struct student s;
+    
+
+    printf("enter student name");
+    fgets(s.name, sizeof(s.name), stdin);
+    
+    printf("enter the 5 subject marks of student \n");
+    for(int i = 0; i < 5 ; i++)
+    {
+    printf("enter student marks %d", i + 1);
+    scanf("%d", &s.marks[i]);
+    s.total += s.marks[i];
+    }
+
+    s.percentage = (s.total / 500.0) * 100;
+    printf("student name is : %s", s.name);
+    printf("student total marks : %d\n", s.total);
+    printf("total percentage is : %.2f", s.percentage);
+    
+    if(s.percentage > 40)
+    {
+        printf("student is pass");
+     }
+    else
+    {
+        printf("student is fail");
+    }
+
+    return 0;
+
+
+}
